@@ -1,0 +1,11 @@
+<dataset>
+    <TB_MODULO MO_ID="1" PR_ID="1" MO_SITUACAO="ATIVO" MO_NOME="Pessoa" MO_DESCRICAO="Descricao1"/>
+    <TB_MODULO MO_ID="2" PR_ID="1" MO_SITUACAO="ATIVO" MO_NOME="Pessoa Juridica" MO_DESCRICAO="Descricao2" MO_PAI="1"/>
+
+    <TB_PERMISSAO PE_ID="1" MO_ID="1" PE_NOME="Visualizar Pessoa" PE_CHAVE="pessoa.visualizar" PE_ACAO="visualizar" PE_DESCRICAO="Descricao1" />
+    <TB_PERMISSAO PE_ID="2" MO_ID="2" PE_NOME="Editar Juridica" PE_CHAVE="pessoa.juridica.editar" PE_ACAO="editar" PE_DESCRICAO="Descricao2" />
+    <TB_PERMISSAO PE_ID="3" MO_ID="2" PE_NOME="Salvar Juridica" PE_CHAVE="pessoa.juridica.salvar" PE_ACAO="salvar" PE_DESCRICAO="Descricao3" />
+    <TB_PERMISSAO PE_ID="4" MO_ID="2" PE_NOME="Excluir Juridica" PE_CHAVE="pessoa.juridica.excluir" PE_ACAO="excluir" PE_DESCRICAO="Descricao4" />
+    <TB_PERMISSAO PE_ID="5" MO_ID="2" PE_NOME="Relatorio Juridica" PE_CHAVE="pessoa.juridica.relatorio" PE_ACAO="relatorio" PE_DESCRICAO="Descricao4" />
+</dataset>
+

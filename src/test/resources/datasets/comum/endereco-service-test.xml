@@ -1,0 +1,18 @@
+<dataset>
+    <TB_MUNICIPIO MU_ID="1" MU_NOME="Coxim"/>
+    <TB_MUNICIPIO MU_ID="2" MU_NOME="Rio Verde"/>
+
+
+    <TB_ENDERECO EN_ID="1" EN_TIPO_ENDERECO="CASA" EN_LOGRADOURO="Rua 11 de abril" EN_NUMERO="188"
+                 EN_COMPLEMENTO="A" EN_BAIRRO="Flavio garcia" EN_REFERENCIA="Em frente ao oscar cervi"/>
+
+    <TB_ENDERECO EN_ID="2" MU_ID="1" EN_TIPO_ENDERECO="CASA" EN_LOGRADOURO="Endereco 2" EN_NUMERO="numero 2"
+                 EN_COMPLEMENTO="complemento 2"
+                 EN_BAIRRO="bairro 2" EN_REFERENCIA="referencia 2"/>
+
+    <TB_ENDERECO EN_ID="3" MU_ID="2" EN_TIPO_ENDERECO="TRABALHO" EN_LOGRADOURO="Endereco 3" EN_NUMERO="numero 3"
+                 EN_COMPLEMENTO="complemento 3" EN_BAIRRO="bairro 3" EN_REFERENCIA="referencia 3"/>
+
+    <TB_ENDERECO EN_ID="4" MU_ID="2" EN_TIPO_ENDERECO="FAZENDA" EN_LOGRADOURO="MODULO 4" EN_NUMERO="numero 3"
+                 EN_COMPLEMENTO="complemento 4" EN_BAIRRO="bairro 4" EN_REFERENCIA="referencia 4"/>
+</dataset>

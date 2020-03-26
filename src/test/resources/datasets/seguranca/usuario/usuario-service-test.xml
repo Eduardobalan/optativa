@@ -1,0 +1,6 @@
+<dataset>
+    <TB_USUARIO US_ID="1" US_SITUACAO="ATIVO" US_NOME="Usuario1" US_LOGIN="Usuario1" US_SENHA="1" />
+    <TB_USUARIO US_ID="2" US_SITUACAO="ATIVO" US_NOME="Usuario2" US_LOGIN="Usuario2" US_SENHA="2" />
+    <TB_USUARIO US_ID="3" US_SITUACAO="ATIVO" US_NOME="Usuario3" US_LOGIN="Usuario3" US_SENHA="3" />
+    <TB_USUARIO US_ID="4" US_SITUACAO="INATIVO" US_NOME="Usuario4" US_LOGIN="Usuario4" US_SENHA="4" />
+</dataset>

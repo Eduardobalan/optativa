@@ -1,0 +1,18 @@
+
+
+    █████╗ ██╗     ██████╗ ██╗   ██╗███████╗       █████╗ ██████╗ ██╗
+   ██╔══██╗██║     ██╔══██╗██║   ██║██╔════╝      ██╔══██╗██╔══██╗██║
+   ███████║██║     ██████╔╝██║   ██║███████╗█████╗███████║██████╔╝██║
+   ██╔══██║██║     ██╔══██╗██║   ██║╚════██║╚════╝██╔══██║██╔═══╝ ██║
+   ██║  ██║███████╗██████╔╝╚██████╔╝███████║      ██║  ██║██║     ██║
+   ╚═╝  ╚═╝╚══════╝╚═════╝  ╚═════╝ ╚══════╝      ╚═╝  ╚═╝╚═╝     ╚═╝
+
+
+Spring Boot versão: ${spring-boot.formatted-version}
+Albus-API versão: ${application.version}
+Porta da Aplicação: ${server.port}
+
+logging.path: ${logging.path}
+logging.level.root: ${logging.level.root}
+logging.level.org.hibernate:${logging.level.org.hibernate}
+logging.level.org.springframework.web: ${logging.level.org.springframework.web}

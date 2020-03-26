@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="eduardoBalan" id="0.0.1-tagdatabase">
+        <tagDatabase tag="0.0.1"/>
+    </changeSet>
+
+    <!-- Carga Inicial -->
+    <changeSet author="eduardoBalan" id="0.0.1-1_schema">
+        <sqlFile encoding="utf8" path="0.0.1/1_schema.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-2_tb_modulo">
+        <sqlFile encoding="utf8" path="0.0.1/2_tb_modulo.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-3_tb_perfil">
+        <sqlFile encoding="utf8" path="0.0.1/3_tb_perfil.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-4_tb_permissao">
+        <sqlFile encoding="utf8" path="0.0.1/4_tb_permissao.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-5_tb_permissao_por_perfil">
+        <sqlFile encoding="utf8" path="0.0.1/5_tb_permissao_por_perfil.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-6_tb_usuario">
+        <sqlFile encoding="utf8" path="0.0.1/6_tb_usuario.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-7_tb_usuario_perfil">
+        <sqlFile encoding="utf8" path="0.0.1/7_tb_usuario_perfil.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-8_tb_pais">
+        <sqlFile encoding="utf8" path="0.0.1/8_tb_pais.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-9_tb_estado">
+        <sqlFile encoding="utf8" path="0.0.1/9_tb_estado.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-10_tb_municipio">
+        <sqlFile encoding="utf8" path="0.0.1/10_tb_municipio.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-11_tb_banco">
+        <sqlFile encoding="utf8" path="0.0.1/11_tb_banco.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-12_tb_pessoa">
+        <sqlFile encoding="utf8" path="0.0.1/12_tb_pessoa.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-13_tb_pessoa_fisica">
+        <sqlFile encoding="utf8" path="0.0.1/13_tb_pessoa_fisica.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-14_tb_pessoa_juridica">
+        <sqlFile encoding="utf8" path="0.0.1/14_tb_pessoa_juridica.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+    <changeSet author="eduardoBalan" id="0.0.1-15_tb_endereco">
+        <sqlFile encoding="utf8" path="0.0.1/15_tb_endereco.sql" relativeToChangelogFile="true" splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,8 @@
+<dataset>
+    <tb_modulo MO_ID="1" PR_ID="1" MO_SITUACAO="ATIVO" MO_NOME="MODULO 1" MO_DESCRICAO="descc"/>
+    <tb_modulo MO_ID="2" PR_ID="1" MO_SITUACAO="ATIVO" MO_NOME="MODULO 2" MO_DESCRICAO="descc" MO_PAI="1"/>
+    <tb_modulo MO_ID="3" PR_ID="1" MO_SITUACAO="ATIVO" MO_NOME="MODULO 3" MO_DESCRICAO="descc" MO_PAI="2"/>
+    <tb_modulo MO_ID="4" PR_ID="1" MO_SITUACAO="INATIVO" MO_NOME="MODULO 4" MO_DESCRICAO="descc" MO_PAI="3"/>
+
+    <TB_PERMISSAO PE_ID="1" MO_ID="2" PE_NOME="Visualizar Pessoa" PE_CHAVE="pessoa.visualizar" PE_ACAO="visualizar" PE_DESCRICAO="Descricao1" />
+</dataset>
