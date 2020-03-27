@@ -1,7 +1,9 @@
 package br.com.albus.generic;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.repository.NoRepositoryBean;
+import org.springframework.data.repository.query.QueryByExampleExecutor;
 
 import java.io.Serializable;
 
@@ -15,7 +17,7 @@ import java.io.Serializable;
  * @param <E> Entity ou entidade da aplicação
  */
 @NoRepositoryBean
-public interface GenericRepository<E, I extends Serializable> extends JpaRepository<E, I> {
+public interface GenericRepository<E, I extends Serializable> extends JpaRepository<E, I>, QueryByExampleExecutor<E> {
 
 
 }

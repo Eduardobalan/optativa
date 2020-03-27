@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/albus/pessoaJuridica")
+@RequestMapping(path = "/albus/pessoa/juridica")
 public class PessoaJuridicaService extends GenericService<PessoaJuridicaController, PessoaJuridica, PessoaJuridicaRepository, Long> {
 
 }
