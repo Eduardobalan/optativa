@@ -1,5 +1,9 @@
 package br.com.albus.generic;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -13,6 +17,9 @@ import java.util.Date;
  * @author Eduardo Balan
  */
 @MappedSuperclass
+@Getter
+@Setter
+@NoArgsConstructor
 public abstract class GenericEntity<T extends Serializable> implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -31,38 +38,6 @@ public abstract class GenericEntity<T extends Serializable> implements Serializa
     protected String usuarioCadastro;
     //@JsonIgnore
     protected String usuarioAlteracao;
-
-    public Date getDataCadastro() {
-        return this.dataCadastro;
-    }
-
-    public void setDataCadastro(Date dataCadastro) {
-        this.dataCadastro = dataCadastro;
-    }
-
-    public Date getDataAlteracao() {
-        return this.dataAlteracao;
-    }
-
-    public void setDataAlteracao(Date dataAlteracao) {
-        this.dataAlteracao = dataAlteracao;
-    }
-
-    public String getUsuarioCadastro() {
-        return this.usuarioCadastro;
-    }
-
-    public void setUsuarioCadastro(String usuarioCadastro) {
-        this.usuarioCadastro = usuarioCadastro;
-    }
-
-    public String getUsuarioAlteracao() {
-        return this.usuarioAlteracao;
-    }
-
-    public void setUsuarioAlteracao(String usuarioAlteracao) {
-        this.usuarioAlteracao = usuarioAlteracao;
-    }
 
     /**
      * Indica quando outro objeto é igual a este. Nesta implementação, qualquer objeto derivado de

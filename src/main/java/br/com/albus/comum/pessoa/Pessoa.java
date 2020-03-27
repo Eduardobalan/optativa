@@ -1,7 +1,6 @@
 package br.com.albus.comum.pessoa;
 
 import br.com.albus.generic.GenericEntity;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,7 +19,6 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @DynamicUpdate
@@ -42,9 +40,8 @@ public class Pessoa extends GenericEntity<Long> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "PS_TIPO_PESSOA")
+    @Column(name = "PS_TIPO_PESSOA", insertable = false, updatable = false)
     @Enumerated(EnumType.STRING)
-    @Transient
     private ETipoPessoa tipoPessoa;
 
     @Column(name = "PS_NOME", nullable = false)

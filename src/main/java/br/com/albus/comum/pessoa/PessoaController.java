@@ -11,9 +11,11 @@ public class PessoaController extends GenericController <Pessoa, PessoaRepositor
 
     @Override
     public Pessoa inserir(Pessoa entityNova) {
-        if(Objects.isNull(entityNova.getTipoPessoa())){
-            throw new GenericRuntimeException("O campo tipoPessoa é obrigatorio (FISICA, JURIDICA)",null);
-        }
-        return super.inserir(entityNova);
+        throw new GenericRuntimeException("Vc deve utilizar o recurso /pessoaFisica ou /pessoaJuridica", null);
+    }
+
+    @Override
+    public Pessoa editar(Pessoa enditadeAEditar) {
+        throw new GenericRuntimeException("Vc deve utilizar o recurso /pessoaFisica ou /pessoaJuridica", null);
     }
 }
