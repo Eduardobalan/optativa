@@ -1,6 +1,9 @@
 package br.com.albus.comum.pessoa.fisica;
 
 import br.com.albus.comum.pessoa.Pessoa;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
@@ -9,6 +12,9 @@ import javax.persistence.*;
 @DynamicUpdate
 @Table(name = "TB_PESSOA_FISICA", schema = "public")
 @DiscriminatorValue ("FISICA")
+@Getter
+@Setter
+@NoArgsConstructor
 public class PessoaFisica extends Pessoa {
 
 	@Column(name = "PF_CPF")
@@ -16,22 +22,6 @@ public class PessoaFisica extends Pessoa {
 
 	@Column(name = "PF_RG")
 	private String rg;
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
-	public String getRg() {
-		return rg;
-	}
-
-	public void setRg(String rg) {
-		this.rg = rg;
-	}
 
 	@Override
 	public boolean equals(Object obj) {

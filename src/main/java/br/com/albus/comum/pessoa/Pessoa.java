@@ -1,6 +1,10 @@
 package br.com.albus.comum.pessoa;
 
 import br.com.albus.generic.GenericEntity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.AttributeOverride;
@@ -8,12 +12,15 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @DynamicUpdate
@@ -25,6 +32,9 @@ import javax.persistence.Table;
 @AttributeOverride(name = "dataAlteracao", column = @Column(name = "PS_DTHR_ALTERACAO"))
 @AttributeOverride(name = "usuarioCadastro", column = @Column(name = "PS_USUARIO_CADASTRO"))
 @AttributeOverride(name = "usuarioAlteracao", column = @Column(name = "PS_USUARIO_ALTERACAO"))
+@Getter
+@Setter
+@NoArgsConstructor
 public class Pessoa extends GenericEntity<Long> {
 
     @Id
@@ -32,37 +42,16 @@ public class Pessoa extends GenericEntity<Long> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "PS_TIPO_PESSOA")
+    @Enumerated(EnumType.STRING)
+    @Transient
+    private ETipoPessoa tipoPessoa;
+
     @Column(name = "PS_NOME", nullable = false)
     private String nome;
 
     @Column(name = "PS_APELIDO")
     private String apelido;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getApelido() {
-        return apelido;
-    }
-
-    public void setApelido(String apelido) {
-        this.apelido = apelido;
-    }
 
     @Override
     public boolean equals(Object obj) {
