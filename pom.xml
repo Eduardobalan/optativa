@@ -18,8 +18,6 @@
         <sonar.plugin.version>3.2</sonar.plugin.version>
     </properties>
 
-
-
     <groupId>br.com.optativa</groupId>
     <artifactId>optativa-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -80,12 +78,16 @@
         </dependency>
 
         <!--database-->
+<!--        <dependency>-->
+<!--            <groupId>org.postgresql</groupId>-->
+<!--            <artifactId>postgresql</artifactId>-->
+<!--            <version>${postgresql.version}</version>-->
+<!--        </dependency>-->
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postgresql.version}</version>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.199</version>
         </dependency>
-
         <!-- LiquiBase -->
         <dependency>
             <groupId>org.liquibase</groupId>
@@ -139,13 +141,7 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-    <!-- Sonar -->
+<!--     Sonar -->
         <dependency>
             <groupId>org.codehaus.sonar</groupId>
             <artifactId>sonar-maven-plugin</artifactId>

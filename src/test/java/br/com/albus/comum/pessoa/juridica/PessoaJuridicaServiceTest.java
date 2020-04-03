@@ -44,7 +44,7 @@ public class PessoaJuridicaServiceTest extends GenericTest {
 
     @Test
     public void buscarPorIdTest() throws Exception {
-        mockMvc.perform(get("/albus/pessoaJuridica/5"))
+        mockMvc.perform(get("/albus/pessoa/juridica/5"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(5)))
                 .andExpect(jsonPath("$.nome", is("AZ LIMIT")))
@@ -54,7 +54,7 @@ public class PessoaJuridicaServiceTest extends GenericTest {
 
     @Test
     public void buscarTodosTest() throws Exception {
-        mockMvc.perform(get("/albus/pessoaJuridica"))
+        mockMvc.perform(get("/albus/pessoa/juridica"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$.[0].id", is(5)))
@@ -74,7 +74,7 @@ public class PessoaJuridicaServiceTest extends GenericTest {
         dbPessoa.setApelido("Higor Delas");
         dbPessoa.setCnpj("77");
 
-        mockMvc.perform(post("/albus/pessoaJuridica")
+        mockMvc.perform(post("/albus/pessoa/juridica")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(new ObjectMapper().writeValueAsString(dbPessoa)))
                 .andExpect(status().isOk())
@@ -87,7 +87,7 @@ public class PessoaJuridicaServiceTest extends GenericTest {
     @Test
     public void editarTest() throws Exception {
 
-        ResultActions resultadoConsulta = mockMvc.perform(get("/albus/pessoaJuridica/5"))
+        ResultActions resultadoConsulta = mockMvc.perform(get("/albus/pessoa/juridica/5"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(5)))
                 .andExpect(jsonPath("$.nome", is("AZ LIMIT")))
@@ -100,7 +100,7 @@ public class PessoaJuridicaServiceTest extends GenericTest {
         pessoa.setCnpj("555");
 
 
-        mockMvc.perform(put("/albus/pessoaJuridica/5")
+        mockMvc.perform(put("/albus/pessoa/juridica/5")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(new ObjectMapper().writeValueAsString(pessoa)))
                 .andExpect(status().isOk())
@@ -112,14 +112,14 @@ public class PessoaJuridicaServiceTest extends GenericTest {
 
     @Test
     public void deletarTest() throws Exception {
-        mockMvc.perform(get("/albus/pessoaJuridica"))
+        mockMvc.perform(get("/albus/pessoa/juridica"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
 
-        mockMvc.perform(delete("/albus/pessoaJuridica/5"))
+        mockMvc.perform(delete("/albus/pessoa/juridica/5"))
                 .andExpect(status().isOk());
 
-        mockMvc.perform(get("/albus/pessoaJuridica"))
+        mockMvc.perform(get("/albus/pessoa/juridica"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)));
     }

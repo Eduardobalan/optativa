@@ -44,7 +44,7 @@ public class PessoaFisicaServiceTest extends GenericTest {
 
     @Test
     public void buscarPorIdTest() throws Exception {
-        mockMvc.perform(get("/albus/pessoaFisica/4"))
+        mockMvc.perform(get("/albus/pessoa/fisica/4"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(4)))
                 .andExpect(jsonPath("$.nome", is("Higor")))
@@ -55,7 +55,7 @@ public class PessoaFisicaServiceTest extends GenericTest {
 
     @Test
     public void buscarTodosTest() throws Exception {
-        mockMvc.perform(get("/albus/pessoaFisica"))
+        mockMvc.perform(get("/albus/pessoa/fisica"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$.[0].id", is(3)))
@@ -78,7 +78,7 @@ public class PessoaFisicaServiceTest extends GenericTest {
         dbPessoa.setCpf("77");
         dbPessoa.setRg("7777");
 
-        mockMvc.perform(post("/albus/pessoaFisica")
+        mockMvc.perform(post("/albus/pessoa/fisica")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(new ObjectMapper().writeValueAsString(dbPessoa)))
                 .andExpect(status().isOk())
@@ -92,7 +92,7 @@ public class PessoaFisicaServiceTest extends GenericTest {
     @Test
     public void editarTest() throws Exception {
 
-        ResultActions resultadoConsulta = mockMvc.perform(get("/albus/pessoaFisica/3"))
+        ResultActions resultadoConsulta = mockMvc.perform(get("/albus/pessoa/fisica/3"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(3)))
                 .andExpect(jsonPath("$.nome", is("Gustavo Balan")))
@@ -105,7 +105,7 @@ public class PessoaFisicaServiceTest extends GenericTest {
         pessoa.setRg("alterado2");
 
 
-        mockMvc.perform(put("/albus/pessoaFisica/3")
+        mockMvc.perform(put("/albus/pessoa/fisica/3")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(new ObjectMapper().writeValueAsString(pessoa)))
                 .andExpect(status().isOk())
@@ -118,14 +118,14 @@ public class PessoaFisicaServiceTest extends GenericTest {
 
     @Test
     public void deletarTest() throws Exception {
-        mockMvc.perform(get("/albus/pessoaFisica"))
+        mockMvc.perform(get("/albus/pessoa/fisica"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)));
 
-        mockMvc.perform(delete("/albus/pessoaFisica/3"))
+        mockMvc.perform(delete("/albus/pessoa/fisica/3"))
                 .andExpect(status().isOk());
 
-        mockMvc.perform(get("/albus/pessoaFisica"))
+        mockMvc.perform(get("/albus/pessoa/fisica"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)));
     }

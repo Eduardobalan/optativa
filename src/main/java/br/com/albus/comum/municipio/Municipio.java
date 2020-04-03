@@ -2,6 +2,9 @@ package br.com.albus.comum.municipio;
 
 import br.com.albus.comum.estado.Estado;
 import br.com.albus.generic.GenericEntity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
@@ -20,6 +23,9 @@ import javax.persistence.Table;
 @AttributeOverride(name = "dataAlteracao", column = @Column(name = "MU_DTHR_ALTERACAO"))
 @AttributeOverride(name = "usuarioCadastro", column = @Column(name = "MU_USUARIO_CADASTRO"))
 @AttributeOverride(name = "usuarioAlteracao", column = @Column(name = "MU_USUARIO_ALTERACAO"))
+@Getter
+@Setter
+@NoArgsConstructor
 public class Municipio extends GenericEntity<Long> {
 
     @Id
@@ -37,10 +43,6 @@ public class Municipio extends GenericEntity<Long> {
     @JoinColumn(name = "UF_ID")
     private Estado estado;
 
-    public Municipio() {
-        //Construtor padrão
-    }
-
     @Override
     public Long getId() {
         return id;
@@ -51,29 +53,6 @@ public class Municipio extends GenericEntity<Long> {
         this.id = id;
     }
 
-    public Long getIdIBGE() {
-        return idIBGE;
-    }
-
-    public void setIdIBGE(Long idIBGE) {
-        this.idIBGE = idIBGE;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Estado getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
 
     @Override
     public boolean equals(Object obj) {

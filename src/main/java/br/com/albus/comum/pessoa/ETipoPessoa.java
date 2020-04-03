@@ -1,6 +1,7 @@
 package br.com.albus.comum.pessoa;
 
 public enum ETipoPessoa {
+    PESSOA("pessoa"),
     JURIDICA("juridica"),
     FISICA("fisica");
 

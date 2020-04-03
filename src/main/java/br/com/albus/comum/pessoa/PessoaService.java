@@ -12,11 +12,4 @@ import java.util.List;
 @RequestMapping(path = "/albus/pessoa")
 public class PessoaService extends GenericService<PessoaController, Pessoa, PessoaRepository, Long> {
 
-    @Autowired
-    private PessoaController pessoaController;
-
-//    @GetMapping(params = {"name"})
-//    public Object buscarTodosComParametros(PessoaFilter pessoaFilter) {
-//        return pessoaController.buscarTodos(pessoaFilter);
-//    }
 }

@@ -2,6 +2,9 @@ package br.com.albus.comum.estado;
 
 import br.com.albus.comum.pais.Pais;
 import br.com.albus.generic.GenericEntity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
@@ -20,6 +23,9 @@ import javax.persistence.Table;
 @AttributeOverride(name = "dataAlteracao", column = @Column(name = "UF_DTHR_ALTERACAO"))
 @AttributeOverride(name = "usuarioCadastro", column = @Column(name = "UF_USUARIO_CADASTRO"))
 @AttributeOverride(name = "usuarioAlteracao", column = @Column(name = "UF_USUARIO_ALTERACAO"))
+@Getter
+@Setter
+@NoArgsConstructor
 public class Estado extends GenericEntity<Long> {
 
     @Id
@@ -45,30 +51,6 @@ public class Estado extends GenericEntity<Long> {
     @Override
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getSigla() {
-        return sigla;
-    }
-
-    public void setSigla(String sigla) {
-        this.sigla = sigla;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Pais getPais() {
-        return pais;
-    }
-
-    public void setPais(Pais pais) {
-        this.pais = pais;
     }
 
     @Override

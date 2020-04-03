@@ -2,6 +2,9 @@ package br.com.albus.comum.banco;
 
 import br.com.albus.generic.GenericEntity;
 import br.com.albus.generic.enums.EnumSituacao;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
@@ -19,6 +22,9 @@ import javax.persistence.Table;
 @AttributeOverride(name = "dataAlteracao", column = @Column(name = "BC_DTHR_ALTERACAO"))
 @AttributeOverride(name = "usuarioCadastro", column = @Column(name = "BC_USUARIO_CADASTRO"))
 @AttributeOverride(name = "usuarioAlteracao", column = @Column(name = "BC_USUARIO_ALTERACAO"))
+@Getter
+@Setter
+@NoArgsConstructor
 public class Banco extends GenericEntity<Long> {
 
     @Id
@@ -39,10 +45,6 @@ public class Banco extends GenericEntity<Long> {
     @Column(name = "BC_SITUACAO", nullable = false, length = 10)
     private EnumSituacao situacao;
 
-    public Banco() {
-        //Construtor Padrão
-    }
-
     @Override
     public Long getId() {
         return id;
@@ -51,38 +53,6 @@ public class Banco extends GenericEntity<Long> {
     @Override
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public EnumSituacao getSituacao() {
-        return situacao;
-    }
-
-    public void setSituacao(EnumSituacao situacao) {
-        this.situacao = situacao;
     }
 
     @Override
