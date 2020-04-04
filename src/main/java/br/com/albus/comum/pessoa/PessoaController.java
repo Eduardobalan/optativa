@@ -26,10 +26,4 @@ public class PessoaController extends GenericController<Pessoa, PessoaRepository
         throw new GenericRuntimeException("Vc deve utilizar o recurso /pessoa/fisica ou /pessoa/juridica", null);
     }
 
-    public Object buscarTodos(PessoaFilter pessoaFilter) {
-
-        Pessoa pessoa = new Pessoa();
-        Example<Pessoa> example = Example.of(pessoa);
-        return repository.findAll(example, pessoaFilter.getPageRequest());
-    }
 }
