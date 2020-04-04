@@ -18,15 +18,16 @@ public class PessoaController extends GenericController<Pessoa, PessoaRepository
 
     @Override
     public Pessoa inserir(Pessoa entityNova) {
-        throw new GenericRuntimeException("Vc deve utilizar o recurso /pessoaFisica ou /pessoaJuridica", null);
+        throw new GenericRuntimeException("Vc deve utilizar o recurso /pessoa/fisica ou /pessoa/juridica", null);
     }
 
     @Override
     public Pessoa editar(Pessoa enditadeAEditar) {
-        throw new GenericRuntimeException("Vc deve utilizar o recurso /pessoaFisica ou /pessoaJuridica", null);
+        throw new GenericRuntimeException("Vc deve utilizar o recurso /pessoa/fisica ou /pessoa/juridica", null);
     }
 
     public Object buscarTodos(PessoaFilter pessoaFilter) {
+
         Pessoa pessoa = new Pessoa();
         Example<Pessoa> example = Example.of(pessoa);
         return repository.findAll(example, pessoaFilter.getPageRequest());
