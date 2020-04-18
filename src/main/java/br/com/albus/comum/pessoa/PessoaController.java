@@ -18,7 +18,7 @@ public class PessoaController extends GenericController<Pessoa, PessoaRepository
 
     @Override
     public Pessoa inserir(Pessoa entityNova) {
-        //TODO Asaf Santana
+        //Asaf Santana
         throw new GenericRuntimeException("Vc deve utilizar o recurso /pessoa/fisica ou /pessoa/juridica", null);
     }
 
