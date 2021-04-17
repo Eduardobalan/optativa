@@ -50,6 +50,9 @@ public class Pessoa extends GenericEntity<Long> {
     @Column(name = "PS_APELIDO")
     private String apelido;
 
+    @Column(name = "PS_IDADE")
+    private Long idade;
+
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj);
